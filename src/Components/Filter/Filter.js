@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Filter extends Component {
+    static propTypes = {
+        handleFilter: PropTypes.func.isRequired,
+        filter: PropTypes.string
+    }
 
     handleFilter = (e) => {
         e.preventDefault()

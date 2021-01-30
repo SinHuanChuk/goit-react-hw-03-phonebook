@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class CreateElement extends Component {
 
+    static propTypes = {
+        handleSubmit: PropTypes.func.isRequired,
+        handleChangeNumber: PropTypes.func.isRequired,
+        handleChangeName: PropTypes.func.isRequired,
+        name: PropTypes.string,
+        number: PropTypes.string
+    }
 
     handleChangeName = (e) => {
         e.preventDefault()
